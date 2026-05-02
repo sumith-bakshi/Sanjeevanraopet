@@ -7,6 +7,13 @@ import {
   Landmark,
   MapPin,
 } from "lucide-react";
+import { MdTempleHindu } from "react-icons/md"; 
+import villageGreenFields from "../assets/images/village_green_fileds.jpeg";
+import villageRoad from "../assets/images/village_road.jpeg";
+import villagetemple from "../assets/images/village_temple.jpeg";
+import galleryPlaceholderOne from "../assets/images/Village_1.jpeg";
+import galleryPlaceholderTwo from "../assets/images/Village_2.jpeg";
+import galleryPlaceholderThree from "../assets/images/Village_3.jpeg";
 
 export const languages = {
   en: "English",
@@ -104,8 +111,6 @@ export const navItems = [
   { label: { en: "Home", te: "హోమ్" }, href: "#home" },
   { label: { en: "About", te: "గురించి" }, href: "#about" },
   { label: { en: "Gallery", te: "గ్యాలరీ" }, href: "#gallery" },
-  { label: { en: "Places", te: "ప్రదేశాలు" }, href: "#places" },
-  { label: { en: "Facilities", te: "సౌకర్యాలు" }, href: "#facilities" },
   { label: { en: "Contact", te: "సంప్రదించండి" }, href: "#contact" },
 ];
 
@@ -122,25 +127,28 @@ export const galleryImages = [
       en: "Seasonal farms around the village",
       te: "గ్రామం చుట్టూ కాలానుగుణ పంట పొలాలు",
     },
-    src: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80",
+    src: villageGreenFields,
+    images: [villageGreenFields], //galleryPlaceholderOne, galleryPlaceholderTwo],
   },
   {
-    title: { en: "Village Road", te: "గ్రామ రహదారి" },
+    title: { en: "Village Roads", te: "గ్రామ రహదారులు" },
     caption: {
       en: "Quiet paths connecting homes and fields",
       te: "ఇళ్లను పొలాలతో కలిపే ప్రశాంత మార్గాలు",
     },
-    src: "https://images.unsplash.com/photo-1473773508845-188df298d2d1?auto=format&fit=crop&w=900&q=80",
+    src: villageRoad,
+    images: [villageRoad],// galleryPlaceholderTwo, galleryPlaceholderThree],
   },
   {
-    title: { en: "Temple Bells", te: "ఆలయ ఘంటాలు" },
+    title: { en: "Places of Worship", te: "పూజా స్థలాలు" },
     caption: {
-      en: "Local worship and community gatherings",
-      te: "స్థానిక పూజలు మరియు సామూహిక సమావేశాలు",
+      en: "Temples",//, Mosque & Church in the village",
+      te: "గ్రామంలోని దేవాలయాలు" //, మసీదు మరియు చర్చి",
     },
-    src: "https://images.unsplash.com/photo-1606298855672-3efb63017be8?auto=format&fit=crop&w=900&q=80",
+    src: villagetemple,
+    images: [villagetemple],//, galleryPlaceholderOne, galleryPlaceholderThree],
   },
-  {
+ /* {
     title: { en: "Evening Sky", te: "సాయంత్రపు ఆకాశం" },
     caption: {
       en: "Open horizons and calm village evenings",
@@ -163,12 +171,12 @@ export const galleryImages = [
       te: "ప్రజలు మరియు సంప్రదాయాలతో నిర్మితమైన స్థలం",
     },
     src: "https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?auto=format&fit=crop&w=900&q=80",
-  },
+  },*/
 ];
 
 export const places = [
   {
-    icon: Church,
+    icon: MdTempleHindu,
     title: { en: "Village Temples", te: "గ్రామ ఆలయాలు" },
     description: {
       en: "Important places for prayer, festivals, and cultural gatherings.",

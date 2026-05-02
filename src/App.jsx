@@ -9,10 +9,8 @@ import {
   HeartPulse,
   Home,
   Landmark,
-  Mail,
   MapPin,
   Menu,
-  Phone,
   Sprout,
   X,
 } from "lucide-react";
@@ -37,7 +35,10 @@ import {
 function VillagePage({ language, text }) {
   return (
     <>
-      <ComingSoon language={language} text={text} />
+      <Hero language={language} text={text} />
+      <AboutSection text={text} />
+      <GallerySection language={language} text={text} />
+      <ContactSection text={text} />
     </>
   );
 }
@@ -223,14 +224,6 @@ function ContactSection({ text }) {
       />
       <div className="contact-grid">
         <div className="contact-panel">
-          <a href="tel:+919999999999">
-            <Phone size={20} />
-            <span>+91 99999 99999</span>
-          </a>
-          <a href="mailto:info@sanjeevanraopet.in">
-            <Mail size={20} />
-            <span>info@sanjeevanraopet.in</span>
-          </a>
           <p>
             <MapPin size={20} />
             <span>{text.address}</span>
@@ -278,7 +271,7 @@ export default function App() {
       <Navbar
         currentLanguage={language}
         languages={languages}
-        navItems={[]}
+        navItems={navItems}
         onLanguageChange={setLanguage}
         text={text}
         icons={{ Menu, X }}

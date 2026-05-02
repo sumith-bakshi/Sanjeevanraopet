@@ -160,8 +160,7 @@ button {
   align-items: end;
   background:
     linear-gradient(90deg, rgba(12, 43, 31, 0.82), rgba(12, 43, 31, 0.18)),
-    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1800&q=85")
-      center/cover;
+    url("./assets/images/Village_8.jpeg") center/cover;
   color: var(--white);
   display: grid;
   min-height: 92vh;
@@ -173,8 +172,7 @@ button {
   align-items: center;
   background:
     linear-gradient(90deg, rgba(12, 43, 31, 0.86), rgba(36, 122, 160, 0.36)),
-    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1800&q=85")
-      center/cover;
+    url("./assets/images/Village_8.jpeg") center/cover;
   color: var(--white);
   display: grid;
   min-height: calc(100vh - 78px);
@@ -392,22 +390,26 @@ button {
 }
 
 .gallery-card {
-  aspect-ratio: 4 / 3;
   border-radius: 8px;
   box-shadow: var(--shadow);
   margin: 0;
   overflow: hidden;
+}
+
+.gallery-main-image {
+  height: 360px;
+  overflow: hidden;
   position: relative;
 }
 
-.gallery-card img {
+.gallery-main-image img {
   height: 100%;
   object-fit: cover;
   transition: transform 0.35s ease;
   width: 100%;
 }
 
-.gallery-card:hover img {
+.gallery-card:hover .gallery-main-image img {
   transform: scale(1.04);
 }
 
@@ -430,6 +432,28 @@ button {
   color: #eaf5ec;
   font-size: 0.9rem;
   margin-top: 4px;
+}
+
+.gallery-dots {
+  bottom: 14px;
+  display: flex;
+  gap: 6px;
+  position: absolute;
+  right: 16px;
+  z-index: 2;
+}
+
+.gallery-dots span {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  height: 7px;
+  margin: 0;
+  width: 7px;
+}
+
+.gallery-dots span.active {
+  background: var(--white);
+  width: 18px;
 }
 
 .card-grid {
@@ -467,6 +491,10 @@ button {
   grid-template-columns: minmax(0, 1fr) minmax(300px, 0.8fr);
   margin: 0 auto;
   max-width: 1120px;
+}
+
+.contact-section .contact-grid {
+  grid-template-columns: 1fr;
 }
 
 .announcement-list {
@@ -512,14 +540,14 @@ button {
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: var(--shadow);
-  min-height: 320px;
+  min-height: 460px;
   overflow: hidden;
 }
 
 .map-frame iframe {
   border: 0;
   height: 100%;
-  min-height: 320px;
+  min-height: 460px;
   width: 100%;
 }
 
@@ -602,6 +630,10 @@ button {
   .gallery-grid,
   .card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .gallery-main-image {
+    height: 300px;
   }
 
   .content-section {
